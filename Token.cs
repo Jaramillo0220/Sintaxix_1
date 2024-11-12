@@ -14,6 +14,7 @@ namespace Sintaxis_1
             OperadorTermino, OperadorFactor, IncrementoTermino,
             IncrementoFactor, Puntero, Asignacion,
             OperadorRelacional, OperadorLogico, Cadena,
+            TipoDato, PalabraReservada
 
         }
 
