@@ -11,7 +11,7 @@ using Sintaxix_1;
     3. Evaluar las expresiones matemáticas ----> COMPLETADO
     4. Levantar si en el Console.ReadLine() no ingresan números 
     5. Modificar la variable con el resto de operadores (Incremento de factor y termino) 
-    6. Hacer que funcione el else
+    6. Hacer que funcione el else 
 */
 
 namespace Sintaxis_1
