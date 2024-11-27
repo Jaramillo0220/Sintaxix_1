@@ -5,32 +5,15 @@ using System.Threading.Tasks;
 
 static void Main(string[] args)
 {
-    char a;
-    int b;
+  int a, b = Console.ReadLine();
+  a = (3 + 5) * 8 - (5 - 2*b) / b; // 61
 
-    a = 0;
+  int c = 0;
+  c++;
+  c++;
+  c /= 2;
 
-    if (1==2)
-    {
-        do
-        {
-            Console.WriteLine(".");
-        } while (a < 10);
-        a = 10;
-        if (1 == 2)
-            a = 20;
-        else
-            a = 30;
-    }
-    else
-    {
-        do
-        {
-            Console.WriteLine(".");
-        } while (a < 5);
-        a = 40;
-        for (a=0; a < 10; a=2)
-        {
-        }
-    }
+  if(a + 9 == 70) {
+    Console.WriteLine("Es verdadero");
+  }
 }

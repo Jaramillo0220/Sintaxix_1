@@ -9,13 +9,28 @@ namespace Sintaxis_1
     {
         public Sintaxis() : base()
         {
-            nextToken();
+            if (!finArchivo()) // Verifica que el archivo esté listo
+            {
+                nextToken();
+            }
+            else
+            {
+                throw new Exception("El archivo de entrada está vacío o no se pudo inicializar.");
+            }
         }
 
         public Sintaxis(string name) : base(name)
         {
-            nextToken();
+            if (!finArchivo())
+            {
+                nextToken();
+            }
+            else
+            {
+                throw new Exception("El archivo de entrada está vacío o no se pudo inicializar.");
+            }
         }
+
         public void match(string contenido)
         {
             if (contenido == getContenido())
@@ -24,20 +39,21 @@ namespace Sintaxis_1
             }
             else
             {
-                throw new Error("Sintaxis: se espera un " + contenido);
+                throw new Error($"Sintaxis: se esperaba '{contenido}', pero se encontró '{getContenido()}' en la línea {linea - 1}");
             }
         }
 
-        public void match(Tipos clasification)
+        public void match(Tipos clasificacion)
         {
-            if (clasification == getClasificacion())
+            if (clasificacion == getClasificacion())
             {
                 nextToken();
             }
             else
             {
-                throw new Error("Sintaxis: se espera un " + clasification);
+                throw new Error($"Sintaxis: se esperaba '{clasificacion}', pero se encontró '{getClasificacion()}' en la línea {linea - 1}");
             }
         }
+
     }
 }

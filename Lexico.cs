@@ -284,11 +284,13 @@ namespace Sintaxis_1
             char c;
             string buffer = "";
             int estado = 0;
+
             while (estado >= 0)
             {
                 c = (char)archivo.Peek();
                 estado = TRAND[estado, Columna(c)];
                 Clasifica(estado);
+
                 if (estado >= 0)
                 {
                     archivo.Read();
@@ -296,6 +298,7 @@ namespace Sintaxis_1
                     {
                         linea++;
                     }
+
                     if (estado > 0)
                     {
                         buffer += c;
@@ -346,7 +349,7 @@ namespace Sintaxis_1
                             break;
                     }
                 }
-                log.WriteLine(getContenido() + " ------ " + getClasificacion());
+                //log.WriteLine(getContenido() + " ------ " + getClasificacion());
             }
         }
         public bool finArchivo()
